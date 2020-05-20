@@ -25,7 +25,7 @@ class ProductController extends Controller
   public function index()
   {
     $products = Product::latest()->paginate(4);
-    return view('products.index',compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+    return view('products.index',compact('products'))->with('i', (request()->input('page', 1) - 1) * 4);
   }
 
 
@@ -134,5 +134,19 @@ class ProductController extends Controller
     }
     $product->delete();
     return redirect()->route('products.index')->with('danger','Product deleted successfully');
+  }
+
+
+/**
+ * Search Products.
+ */
+  public function search(Request $request)
+  {
+    $filters = $request->except('_token');
+    $products = $this->repository->search($request->filter);
+    return view('products.index', [
+      'products' => $products,
+      'filters' => $filters,
+    ])->with('i', (request()->input('page', 1) - 1) * 4);
   }
 }
