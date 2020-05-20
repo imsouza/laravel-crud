@@ -24,7 +24,7 @@ class ProductController extends Controller
  */
   public function index()
   {
-    $products = Product::latest()->paginate(5);
+    $products = Product::latest()->paginate(4);
     return view('products.index',compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
   }
 
@@ -51,7 +51,7 @@ class ProductController extends Controller
     $data = $request->only('name', 'description', 'price');
 
     if ($request->hasFile('image') && $request->image->isValid()) {
-      $imagePath = $request->image->store('public/products');
+      $imagePath = $request->image->store('products');
       $data['image'] = $imagePath;
     }
 
@@ -111,7 +111,7 @@ class ProductController extends Controller
         Storage::delete($product->image);
       }
 
-      $imagePath = $request->image->store('public/products');
+      $imagePath = $request->image->store('products');
       $data['image'] = $imagePath;
     }
 
