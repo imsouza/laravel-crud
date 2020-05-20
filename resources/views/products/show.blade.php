@@ -1,7 +1,7 @@
 @extends('products.layout')
 
 @section('content')
-<div class="row">
+<div class="row jumbotron jumbotron-fluid p-1">
   <div class="col-lg-12 margin-tb p-3">
       <div class="pull-left">
           <h3 class="text-dark">Show Product</h3>
@@ -10,9 +10,7 @@
   </div>
 </div>
 
-<hr>
-
-<div class="row">
+<div class="row table">
   <div class="col-xs-12 col-sm-12 col-md-12">
       <div class="form-group">
           <strong>Name:</strong>
@@ -31,6 +29,15 @@
       <div class="form-group">
           <strong>Description:</strong>
           {{ $product->description }}
+      </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        @if ($product->image)
+          <strong>Image:</strong><br>
+          <img src='{{ url("storage/$product->image") }}' width="500px;" alt="{{ $product->name }}" class="img-fluid img-responsive">
+        @endif
       </div>
   </div>
 </div>
