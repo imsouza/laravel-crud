@@ -13,7 +13,7 @@
             </form>
             <a class="btn btn-success btn-block" href="{{ route('products.create') }}"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Create New Product</a>
         </div>
-        <div class="pull-right mt-3">
+        <div class="pull-right">
             @include('products.includes.alerts')
         </div>
     </div>

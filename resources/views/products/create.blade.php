@@ -1,7 +1,5 @@
 @extends('products.layout')
 
-
-
 @section('content')
 
 <div class="row jumbotron jumbotron-fluid p-1">
@@ -33,7 +31,7 @@
       <div class="col-md-12">
           <div class="form-group">
             <strong>Description:</strong>
-            <textarea class="form-control" style="height:150px" name="description" value="{{ old('description') }}" placeholder="16-bit home video game console"></textarea>
+            <textarea class="form-control" style="height:150px" name="description" value="{{ old('description') }}" placeholder="16-bit home video game console" required></textarea>
           </div>
       </div>
 
