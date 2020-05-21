@@ -2,15 +2,10 @@
 
 @section('content')
 
-<div class="row jumbotron jumbotron-fluid p-1">
+<div class="row p-1 mb-3 jumbotron jumbotron-fluid">
     <div class="col-lg-12 margin-tb p-3">
         <div class="pull-left">
             <h3 class="text-dark">Products CRUD</h3>
-            <form action="{{ route('products.search') }}" method="post" class="form form-inline input-group">
-                @csrf
-                <input type="text" name="filter" placeholder="Search" class="form-control mb-1" value="{{ $filters['filter'] ?? '' }}">
-                <button type="submit" class="btn btn-info mb-1"><i class="fa fa-search"></i></button>
-            </form>
             <a class="btn btn-success btn-block" href="{{ route('products.create') }}"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Create New Product</a>
         </div>
         <div class="pull-right">
@@ -18,6 +13,14 @@
         </div>
     </div>
 </div>
+
+
+<form action="{{ route('products.search') }}" method="post" class="form input-group-prepend form-group">
+    @csrf
+    <input type="text" name="filter" placeholder="Search" class="form-control" value="{{ $filters['filter'] ?? '' }}">
+    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+</form>
+
 
 <table class="table table-bordered table-striped table-hover">
     <thead class="thead-dark">
