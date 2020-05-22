@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('products/search', 'ProductController@search')->name('products.search');
-Route::resource('products', 'ProductController'); //->middleware('auth');
+Route::group(['middleware' => ['auth'], 'prefix'=>'admin'], function() {
+	Route::resource('products', 'ProductController');
+	Route::any('products/search', 'ProductController@search')->name('products.search');
+});
+
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Auth::routes([ 'register' => false ]);

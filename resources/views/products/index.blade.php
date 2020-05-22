@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="row p-1 mb-3 jumbotron jumbotron-fluid">
-    <div class="col-lg-12 margin-tb p-3">
+<div class="row bg-light">
+    <div class="col-md-12 margin-tb p-3">
+
         <div class="pull-left">
-            <h3 class="text-dark">Products CRUD</h3>
             <a class="btn btn-success btn-block" href="{{ route('products.create') }}"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Create New Product</a>
         </div>
         <div class="pull-right">
@@ -13,7 +13,6 @@
         </div>
     </div>
 </div>
-
 
 <form action="{{ route('products.search') }}" method="post" class="form input-group-prepend form-group">
     @csrf
