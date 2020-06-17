@@ -4,12 +4,20 @@
   <title>Laravel Products CRUD</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="{{ url('/') }}">
-          {{ config('app.name', 'Laravel Products CRUD') }}
+<body class="bg-dark">
+ <nav class="navbar navbar-expand-lg pl-0 pr-0 ml-0 mr-0 navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="/">
+        <i class="fab fa-product-hunt"></i>roducts CRUD
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
@@ -63,6 +71,8 @@
 
   <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
   <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('assets/js/sb-admin-2.min.js') }}"></script>
   <script src=" {{ asset('assets/vendor/datatables/jquery.dataTables.min.js') }}"></script>
