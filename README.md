@@ -1,7 +1,6 @@
-## Account Balance
+# Laravel Products CRUD
 
-Laravel Products CRUD
-
+CRUD (Create Read Update Delete) in a Laravel Web App created for academic purposes
 
 ## Screenshots
 
